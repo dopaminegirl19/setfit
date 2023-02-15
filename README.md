@@ -9,6 +9,8 @@ Links for datasets used:
 - [`spam.csv`](https://www.kaggle.com/datasets/matleonard/nlp-course)
 - [`physics_chemistry_biology.csv`](https://www.kaggle.com/datasets/vivmankar/physics-vs-chemistry-vs-biology)
 
+For compatibility, the datasets were pre-processed according to `data_preprocessing.py`
+
 
 ## Repo structure
 
