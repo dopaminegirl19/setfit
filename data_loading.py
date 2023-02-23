@@ -1,7 +1,9 @@
-from datasets import load_dataset
+from datasets import Dataset
+import pandas as pd
 
 def data_loader(n_classes, path):
-    data = load_dataset("csv", data_files=path)["train"]
+    data = pd.read_csv(path)
+    data = Dataset.from_pandas(data)
     return n_classes, data
 
 def load_yelp():

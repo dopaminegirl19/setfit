@@ -14,7 +14,7 @@ yelp.to_csv("datasets/yelp_ratings.csv", index=False)
 
 # Physics / chemistry / biology
 subjects = pd.read_csv("datasets/physics_chemistry_biology.csv")
-subjects_dict = {"Physics": 1, "Chemistry": 2, "Biology": 3}
+subjects_dict = {"Physics": 0, "Chemistry": 1, "Biology": 2}
 subjects["label"] = subjects["Topic"].apply(lambda x: subjects_dict[x])
 subjects = subjects.drop(columns="Id")
 subjects = subjects.rename(columns={"Topic": "label_text", "Comment": "text"})
