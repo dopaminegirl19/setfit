@@ -9,7 +9,7 @@ Links for datasets used:
 - [`spam.csv`](https://www.kaggle.com/datasets/matleonard/nlp-course)
 - [`physics_chemistry_biology.csv`](https://www.kaggle.com/datasets/vivmankar/physics-vs-chemistry-vs-biology)
 
-For compatibility, the datasets were pre-processed according to `data_preprocessing.py`
+For column renaming and label formatting, the datasets were pre-processed according to `data_preprocessing.py`
 
 
 ## Repo structure
@@ -19,4 +19,9 @@ The root of the repo is separated into 4 folders, which contain the following:
 2. SetFit but without fine-tuning the pre-trained ST (only train the classification head after ST preprocessing)
 3. Regular supervised fine-tuning of the pre-trained ST connected to the classification head.
 4. Prompting a language model of my choosing.
+
+
+## Future directions
+- Improve train/test split to reflect `n_shots`
+- Standardise train/test dataset sizes across all 3 datasets for comparisonß
 
