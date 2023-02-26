@@ -10,6 +10,7 @@ spam.to_csv("datasets/spam.csv", index=False)
 # Yelp reviews
 yelp = pd.read_csv("datasets/yelp_ratings.csv")
 yelp = yelp.drop(columns="stars")
+yelp['label_text'] = yelp["label"].apply(lambda x: ['negative', 'positive'][int(x)==1])
 yelp.to_csv("datasets/yelp_ratings.csv", index=False)
 
 # Physics / chemistry / biology

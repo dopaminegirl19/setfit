@@ -32,8 +32,6 @@ def train_setfit(model, train_data, test_data, keep_body_frozen=False):
         num_iterations=20, # Number of text pairs to generate for contrastive learning
         num_epochs=1 # Number of epochs to use for contrastive learning
     )
-    # Unfreeze the head and unfreeze the body -> end-to-end training
-    trainer.unfreeze(keep_body_frozen=keep_body_frozen)
     trainer.train()
     metrics = trainer.evaluate()
     return metrics
